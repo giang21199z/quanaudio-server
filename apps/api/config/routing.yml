@@ -1,0 +1,37 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+# custome route
+get_slide:
+  url:   /get-slides
+  param: { module: api, action: getSlides }
+get_menu_type:
+  url:   /get-menu-types
+  param: { module: api, action: getTypesMenu }
+get_audios:
+  url:   /get-audios
+  param: { module: api, action: getAudios }
+get_audio:
+  url:   /get-audio/:id
+  param: { module: api, action: getAudio, id: ''}
+get_audio_by_type:
+  url:   /get-audio-by-type/:idtype
+  param: { module: api, action: getAudioByType, idtype: ''}
+get_cart_items:
+  url:   /get-cart-items/:ids
+  param: { module: api, action: getCartItems, ids: ''}
+post_checkout:
+  url:   /post-checkout
+  param: { module: api, action: postCheckout }
+# default rules
+homepage:
+  url:   /
+  param: { module: default, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
