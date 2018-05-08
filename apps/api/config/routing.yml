@@ -22,6 +22,15 @@ get_cart_items:
 post_checkout:
   url:   /post-checkout
   param: { module: api, action: postCheckout }
+get_latest_news:
+  url:   /get-latest-news
+  param: { module: api, action: getLatestNews}
+get_detail_new:
+  url:   /get-detail-new/:id
+  param: { module: api, action: getDetailNew, id: ''}
+get_random_new:
+  url:   /get-random-new/:id
+  param: { module: api, action: getRandomNew, id: ''}
 # default rules
 homepage:
   url:   /

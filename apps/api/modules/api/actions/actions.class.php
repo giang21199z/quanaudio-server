@@ -91,4 +91,29 @@ class apiActions extends sfActions
             return $this->renderText(json_encode(array('status' => sfConfig::get('app_error'))));
         }
     }
+
+    /**
+     * Api get latest news
+     */
+    public function executeGetLatestNews(sfWebRequest $request){
+        $offset = $request->getParameter('pageNum');
+        $limit = 1;
+        return $this->renderText(json_encode(NewsTable::getLatestNews($limit, $offset)));
+    }
+
+    /**
+     * Api get detail new
+     */
+    public function executeGetDetailNew(sfWebRequest $request){
+        $id = $request->getParameter('id');
+        return $this->renderText(json_encode(NewsTable::getDetailNew($id)));
+    }
+
+    /**
+     * Api get random new
+     */
+    public function executeGetRandomNew(sfWebRequest $request){
+        $id = $request->getParameter('id');
+        return $this->renderText(json_encode(NewsTable::getNewRandom($id)));
+    }
 }

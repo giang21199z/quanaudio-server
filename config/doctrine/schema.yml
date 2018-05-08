@@ -36,6 +36,13 @@ Audio:
       primary: false
       notnull: false
       autoincrement: false
+    description:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
     image:
       type: string(200)
       fixed: false
@@ -199,14 +206,14 @@ News:
       primary: true
       autoincrement: true
     title:
-      type: string(45)
+      type: string(500)
       fixed: false
       unsigned: false
       primary: false
       notnull: false
       autoincrement: false
     description:
-      type: string(200)
+      type: string()
       fixed: false
       unsigned: false
       primary: false
@@ -218,6 +225,13 @@ News:
       unsigned: false
       primary: false
       notnull: false
+      autoincrement: false
+    image:
+      type: string(200)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
       autoincrement: false
     updated:
       type: timestamp(25)
