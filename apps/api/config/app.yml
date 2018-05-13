@@ -6,4 +6,4 @@ all:
   .app_set:
     order_success: Đặt hàng thành công
     success: SUCCESS
-    error: ERROR  
+    error: ERROR

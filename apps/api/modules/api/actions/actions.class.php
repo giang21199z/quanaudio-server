@@ -34,7 +34,12 @@ class apiActions extends sfActions
      * Api get all audio
      */
     public function executeGetAudios(sfWebRequest $request){
-        return $this->renderText(json_encode(AudioTable::getAudios()));
+        $type = $request->getParameter('type');
+        if ($type == NULL) {
+            return $this->renderText(json_encode(AudioTable::getAudios()));
+        } else {
+            return $this->renderText(json_encode(AudioTable::getAudioByType($type)));
+        }
     }
 
     /**
@@ -98,7 +103,8 @@ class apiActions extends sfActions
     public function executeGetLatestNews(sfWebRequest $request){
         $offset = $request->getParameter('pageNum');
         $limit = 1;
-        return $this->renderText(json_encode(NewsTable::getLatestNews($limit, $offset)));
+        $category = $request->getParameter('category');
+        return $this->renderText(json_encode(NewsTable::getLatestNews($category,$limit, $offset)));
     }
 
     /**

@@ -23,8 +23,8 @@ post_checkout:
   url:   /post-checkout
   param: { module: api, action: postCheckout }
 get_latest_news:
-  url:   /get-latest-news
-  param: { module: api, action: getLatestNews}
+  url:   /get-latest-news/:type
+  param: { module: api, action: getLatestNews, type: ''}
 get_detail_new:
   url:   /get-detail-new/:id
   param: { module: api, action: getDetailNew, id: ''}
