@@ -1,20 +1,13 @@
 <?php
-
 /**
  * Created by PhpStorm.
- * User: Administrator
+ * User: Giang21199z
  * Date: 13/07/2015
  * Time: 20:53 CH
  */
+header('Access-Control-Allow-Origin: *');
 class apiActions extends sfActions
 {
-    public function preExecute(){
-        $this->getResponse()->setHttpHeader('Content-Type', 'application/json');
-        $this->getResponse()->setHttpHeader('Access-Control-Allow-Headers', 'origin, content-type, accept');
-        $this->getResponse()->setHttpHeader('Access-Control-Allow-Origin', '*');
-        $this->getResponse()->setHttpHeader('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, PATCH, OPTIONS');
-        parent::preExecute();
-    }
 
     /**
      * Api get slides
@@ -121,5 +114,107 @@ class apiActions extends sfActions
     public function executeGetRandomNew(sfWebRequest $request){
         $id = $request->getParameter('id');
         return $this->renderText(json_encode(NewsTable::getNewRandom($id)));
+    }
+
+    /**
+     * API ADMINISTRATOR
+     */
+
+    /**
+     * Api login
+     */
+    public function executePostLogin(sfWebRequest $request){
+        if($request->isMethod('POST')){
+            $dataPost = json_decode($request->getContent());
+            if(
+                $dataPost->username && $dataPost->password &&
+                $dataPost->username == 'quanaudio' && $dataPost->password == 'muoisau9'
+            ){
+                $header = [
+                    "alg"     => "RS256",
+                    "typ"     => "JWT"
+                ];
+
+                $payload = [
+                    "username" => $dataPost->username,
+                    "expired" => strtotime(date('Y/m/d')) + 3600
+                ];
+                $jwt = [
+                    "token" => $this->generateJWT($header, $payload)
+                ];
+                return $this->renderText(json_encode($jwt));
+            }
+        }
+        return $this->renderText(json_encode(["message" => "mày định hack à con!!!"]));
+    }
+
+    private function generateJWT( $header, $payload){
+        $PRIVATE_KEY = "qu@n@udi0.Vn";
+
+        $ALGO = "sha256";
+
+        $headerEncoded = $this->base64UrlEncode(json_encode($header));
+
+        $payloadEncoded = $this->base64UrlEncode(json_encode($payload));
+
+        $dataEncoded = "$headerEncoded.$payloadEncoded";
+
+        $rawSignature = hash_hmac($ALGO, $dataEncoded, $PRIVATE_KEY, true);
+
+        $signatureEncoded = $this->base64UrlEncode($rawSignature);
+
+        $jwt = "$dataEncoded.$signatureEncoded";
+
+        return $jwt;
+    }
+
+    private function base64UrlEncode($data){
+        $urlSafeData = strtr(base64_encode($data), '+/', '-_');
+
+        return rtrim($urlSafeData, '=');
+    }
+
+    private function base64UrlDecode($data){
+        $urlUnsafeData = strtr($data, '-_', '+/');
+
+        $paddedData = str_pad($urlUnsafeData, strlen($data) % 4, '=', STR_PAD_RIGHT);
+
+        return base64_decode($paddedData);
+    }
+
+    private function verifyJWT($jwt){
+        $PRIVATE_KEY = "qu@n@udi0.Vn";
+
+        $ALGO = "sha256";
+
+        list($headerEncoded, $payloadEncoded, $signatureEncoded) = explode('.', $jwt);
+
+        $dataEncoded = "$headerEncoded.$payloadEncoded";
+
+        $signature = $this->base64UrlDecode($signatureEncoded);
+
+        $rawSignature = hash_hmac($ALGO, $dataEncoded, $PRIVATE_KEY, true);
+
+        return hash_equals($rawSignature, $signature);
+    }
+
+    public function executePostAddProduct(sfWebRequest $request){
+        if($request->isMethod('POST')) {
+            $dataPost = json_decode($request->getContent());
+            $audio = new Audio();
+            $audio->setName($dataPost->name);
+            $audio->setBrand($dataPost->brand);
+            $audio->setPrice($dataPost->price);
+            $audio->setCondition($dataPost->condition);
+            $audio->setDescription($dataPost->description);
+            $audio->setImage($dataPost->image);
+            $audio->setImage2($dataPost->image2);
+            $audio->setImage3($dataPost->image3);
+            $audio->setImage4($dataPost->image4);
+            $audio->setIdtype($dataPost->idtype);
+            $audio->save();
+            return $this->renderText(json_encode(["message" => "POST SUCCESS"]));
+        }
+        return $this->renderText(json_encode(["message" => "SUCCESS"]));
     }
 }

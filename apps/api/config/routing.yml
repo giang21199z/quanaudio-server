@@ -31,6 +31,13 @@ get_detail_new:
 get_random_new:
   url:   /get-random-new/:id
   param: { module: api, action: getRandomNew, id: ''}
+# ========admin router===========
+post_login:
+  url:   /login
+  param: { module: api, action: postLogin}
+post_produt:
+  url:   /add-new-product
+  param: { module: api, action: postAddProduct}
 # default rules
 homepage:
   url:   /

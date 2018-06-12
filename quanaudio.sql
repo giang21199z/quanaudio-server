@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 08, 2018 lúc 06:19 CH
--- Phiên bản máy phục vụ: 10.1.21-MariaDB
--- Phiên bản PHP: 5.6.30
+-- Host: localhost
+-- Generation Time: Jun 12, 2018 at 05:23 PM
+-- Server version: 10.0.31-MariaDB-cll-lve
+-- PHP Version: 7.0.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `quanaudio`
+-- Database: `quanaudio.vn`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `audio`
+-- Table structure for table `audio`
 --
 
 CREATE TABLE `audio` (
@@ -42,21 +44,35 @@ CREATE TABLE `audio` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `audio`
+-- Dumping data for table `audio`
 --
 
 INSERT INTO `audio` (`idaudio`, `name`, `price`, `condition`, `brand`, `description`, `image`, `image2`, `image3`, `image4`, `updated`, `idtype`) VALUES
-(1, 'Loa Full ca sound F212', '15000000', 'new', 'HOt', '', 'loa-full-ca-sound.jpg', 'loa-full-ca-sound.jpg', 'loa-full-ca-sound.jpg', 'loa-full-ca-sound.jpg', '2018-04-21 13:28:10', 21),
-(2, 'Loa Full ca sound KP-6012', '13000000', 'new', 'hot', '', 'Loa-Full-ca-sound-KP-6012.jpg', 'Loa-Full-ca-sound-KP-6012.jpg', 'Loa-Full-ca-sound-KP-6012.jpg', 'Loa-Full-ca-sound-KP-6012.jpg', '2018-04-21 13:28:10', 21),
-(3, 'LOA FULL DMX – CH12', '16300000', 'new ', 'hotr', '<p>Bạn đang cần 1 cặp <a href=\"https://quanaudio.vn/danh-muc/loa-karaoke/\"><strong>loa karaoke</strong></a> chuyên nghiệp, chính hãng, chất lượng cao cho cấu hình dàn karaoke gia đình và kinh doanh phòng hát ?</p><p><a href=\"https://quanaudio.vn/san-pham/loa-full-dmx-ch12/\"><strong>Loa karaoke DMX CH12</strong></a> chính là sự lựa chọn hợp lý cho bạn. Sản phẩm của hãng DMX với công nghệ Italia được thiết kể theo tiêu chuẩn loa karaoke chuyên nghiệp hiện đại.</p><p>Với thiết kế đơn giản, khỏe khoắn, sang trọng, màu nâu sáng, mặt căng chắc chắn có lớp vải dù đẹp mắt.</p><p>Thùng loa được thiết kế sâu kết hợp với bass loa và các linh kiện cao cấp mang đến âm trầm chắc chắn, mạnh mẽ, không bị vỡ tiếng. Cũng giống như các dòng loa karaoke chuyên nghiệp khác loa DMX CH12 cũng là dòng loa 2 đường tiếng, với 1 bass 30 coil 76 và 1 treble kèn coil 44 giúp cho âm thanh được bay xa, thanh thoát, trong trẻo không bị lẫn tạp âm</p><p>Công suất loa 350w 1 thùng loa đáp ứng cực tốt cho âm thanh phòng karaoke gia đình khoảng 25-30m2 hoặc phòng hát kinh doanh vơi mức đầu tư tương đối. Khi được phối ghép phù hợp hợp sẽ mang đến tiếng hát nhẹ và bay trên nền nhạc sôi động, rộn ràng, giúp bạn thoải mái hát lâu mà không thấy mệt.</p><p>Loa treble có mạch bảo vệ tiên tiến giúp chống cháy loa khi hoạt động ở cường độ cao hoặc tín hiệu đầu vào quá lớn, giúp loa hoạt động bền bỉ hơn.<br /> 2 lỗ thông hơi lớn hình chữ nhật ở phía sau loa giúp tản nhiệt hiệu quả tăng độ bền, tuổi thọ cho loa.</p><p>Sử dụng cổng kết nối Neutric chuyên nghiệp vừa chắc chắn, vừa truyền tín hiệu âm thanh hay và ổn định hơn.</p><p>Phù hợp để chơi tốt nhiều thể loại nhạc, nhất là nhạc mạnh như remix, dance… cực hay và sôi động.</p><p>Về bố trí loa trong phòng, bạn có thể treo đôi <a href=\"https://quanaudio.vn/danh-muc/loa-karaoke/\"><strong><span style=\"color: blue;\">loa karaoke</span></strong></a> thẳng đứng hoặc treo ngang đều đạt thẩm mỹ và chất lượng âm thanh.</p><p> </p><p><strong>Thông số kỹ thuật:</strong></p><p>Loa dmx âm thanh nối tiếp: 12 inch</p><p>Loa mô hình: ch-12 Loại loa: 12 \" Hai-cách đầy đủ-tầm loa thiết kế the inverter</p><p>Thiết bị đã được cấu hình: 12 \"( 300 mm ) ferrite woofer, 1.4\"(36 mm) nén trình điều khiển ferrite</p><p>Tần suất: 50 hz-20 khz</p><p>Công Suất: 350 w</p><p>Độ nhạy: 96.5 DB</p><p>Tối đa spl: 128 DB</p><p>Trở kháng tiêu chuẩn: 8 ohm</p><p>Bức xạ góc: 80° x 50°</p><p>Đường dây: 2 x speakon nl4</p><p>Size (mm): 37,6 × 57,5 × 39,9 (cm)</p><p>Cân nặng (kg): 23</p><p> </p><p><strong>Loa DMX CH12</strong> chính là sự lựa chọn tuyệt vời, đáp ứng rất tốt cho không gian rộng từ 25 – 35m2 gia đình hát rất tốt và bay tiếng. Với những đơn vị kinh doanh phòng hát cần có sự kết hợp thêm với những loa khác, đặc biệt là loa sub để âm thanh được mạnh mẽ và đầy ắp căn phòng.</p>', 'LOA-FULL-DMX-CH12.jpg', 'LOA-FULL-DMX-CH12.jpg', 'LOA-FULL-DMX-CH12.jpg', 'LOA-FULL-DMX-CH12.jpg', '2018-04-21 13:28:10', 21),
-(4, 'VANG SỐ CA SOUND 9900 PLUS', '6000000', 'new', 'hot', '', 'VANG-SO-CA-SOUND-9900-PLUS.jpg', 'VANG-SO-CA-SOUND-9900-PLUS.jpg', 'VANG-SO-CA-SOUND-9900-PLUS.jpg', 'VANG-SO-CA-SOUND-9900-PLUS.jpg', '2018-04-21 13:28:10', 21),
-(5, 'VANG SỐ CA SOUND 8800 PLUS', '5000000', 'new', 'hot', '', 'VANG-SO-CA-SOUND-8800.jpg', 'VANG-SO-CA-SOUND-8800.jpg', 'VANG-SO-CA-SOUND-8800.jpg', 'VANG-SO-CA-SOUND-8800.jpg', '2018-04-21 13:28:10', 21),
-(6, 'Micro Vina KTV USS 900 ', '4000000', 'new', 'hot', '<p><a href=\"https://quanaudio.vn/san-pham/micro-vina-ktv-uss-900/\"><strong>Micro VinaKTV USS 900</strong></a> là sản phẩm mic bán chạy nhất của Quân Audio</p><p>Điểm đặc biệt nhất của mic là chức năng tự động dò sóng sạch, giúp loại bỏ những tần số xấu, tần số bị trùng gây nhiễu sóng. Âm thanh sẽ đầy trong trẻo và thật như ở phòng thu âm</p><p>Hệ thống Equalize cài đặt sẵn cho phép điều chỉnh độ nhạy thích hợp với những dòng <a href=\"https://quanaudio.vn/danh-muc/loa-karaoke/\">loa karaoke</a> khác nhau cho ra tiếng hát thật lý tưởng, giọng hát hay hơn mà loa cũng bền hơn.Hệ thống feedback tự động và 5 mức đặt cắt tiếng rít bằng tay. Nhờ đó micro kết nối được với hầu hết loại loa và amply mà không lo bị tiếng rú rít.</p><p>Mic sẽ tự động ngắt tín hiệu sau 5 giây nếu như bạn không cầm tay, sau 5 phút mic sẽ chuyển sang chế độ ngắt pin và sau 15 phút mic sẽ chuyển sang chế độ tắt nguồn. Như vậy mic sẽ giữ được tuổi thọ của pin đồng thời sẽ giảm tiếng ù khi bạn đặt 2 mic cạnh nhau mà quên không tắt.</p><p>Vỏ được làm bằng hợp kim, đầu chụp được làm bằng thép chống gỉ cùng với lớp phủ nano giúp cho mic chống xước, chống thấm nước, chông vân tay ở mức tối đa nhất.</p><p>Mic có độ nhạy cao dễ hát, không tốn sức khi hát, khi hát to gần mic không bị vỡ tiếng.</p><p>Với bộ <a href=\"https://quanaudio.vn/danh-muc/micro/\">micro karaoke</a> này bạn có thể sự dụng trong dàn karaoke gia đình cũng như kinh doanh phòng hát thật tiện lợi.</p><p><strong>Thông số kỹ thuật </strong></p><p>Tần Số: 740 – 790MHz</p><p>Băng tần hoạt động: FM</p><p>Chiều rộng ban nhạc: 50MHz</p><p>Số kênh: 200 Khoảng cách các kênh: 250KHz</p><p>Mức độ Ổn định tần số: ± 0,005%</p><p>Phạm vi hoạt động: 100dB</p><p>Độ lệch trên đỉnh: ± 45KHz</p><p>Phản ứng mức âm thanh: 80Hz – 18KHz (± 3dB)</p><p><strong>Chế độ bảo hành:</strong></p><p>Tay mic: 10 tháng</p><p>Đầu thu: 20 tháng</p><p>Phụ kiện đi kèm bao gồm: Nguồn mic, chống lăn cao su, ăng ten.</p>', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', '2018-04-21 13:28:10', 21);
+(1, 'LOA CA SOUND - F210', '7500000', 'Mới nguyên chiếc', 'Nhập khẩu', 'Mừng khai trương sale off 25%', 'loa-full-ca-sound.jpg', 'loa-full-ca-sound.jpg', 'loa-full-ca-sound.jpg', 'loa-full-ca-sound.jpg', '2018-04-21 13:28:10', 21),
+(2, 'LOA CA SOUND - F212', '8000000', 'Mới nguyên chiếc', 'Nhập khẩu', 'Mừng khai trương sale off 25%', 'Loa-Full-ca-sound-KP-6012.jpg', 'Loa-Full-ca-sound-KP-6012.jpg', 'Loa-Full-ca-sound-KP-6012.jpg', 'Loa-Full-ca-sound-KP-6012.jpg', '2018-04-21 13:28:10', 21),
+(3, 'LOA CA SOUND - F512', '6600000', 'Mới nguyên chiếc', 'Nhập khẩu', 'Mừng khai trương sale off 25%', 'LOA-FULL-DMX-CH12.jpg', 'LOA-FULL-DMX-CH12.jpg', 'LOA-FULL-DMX-CH12.jpg', 'LOA-FULL-DMX-CH12.jpg', '2018-04-21 13:28:10', 21),
+(4, 'LOA CA SOUND - H12', '11500000', 'Mới nguyên chiếc', 'Nhập khẩu', 'Mừng khai trương sale off 25%', 'VANG-SO-CA-SOUND-9900-PLUS.jpg', 'VANG-SO-CA-SOUND-9900-PLUS.jpg', 'VANG-SO-CA-SOUND-9900-PLUS.jpg', 'VANG-SO-CA-SOUND-9900-PLUS.jpg', '2018-04-21 13:28:10', 21),
+(5, 'LOA CA SOUND - K610', '3100000', 'Mới nguyên chiếc', 'Nhập khẩu', 'Mừng khai trương sale off 20%', 'VANG-SO-CA-SOUND-8800.jpg', 'VANG-SO-CA-SOUND-8800.jpg', 'VANG-SO-CA-SOUND-8800.jpg', 'VANG-SO-CA-SOUND-8800.jpg', '2018-04-21 13:28:10', 21),
+(6, 'LOA CA SOUND - K710', '6200000', 'Mới nguyên chiếc', 'Nhập khẩu', 'Mừng khai trương sale off 20%', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', '2018-04-21 13:28:10', 21),
+(7, 'CA KP6012', '6600000', 'Mới', 'Nhập khẩu nguyên chiếc', 'Sale off 25%', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', '2018-06-01 17:00:00', 21),
+(9, 'LOA SOUND DMX CH12', '22500000', 'Mới', 'Nhập khẩu nguyên chiếc', 'Mừng sale off 25%', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', '2018-06-26 17:00:00', 21),
+(10, 'Main APV 4.6', '7500000', 'Mới', 'Nhập khẩu', '4 kênh - 600w/1 kênh\r\nbảo hành 12 tháng', 'main.png', 'main.png', 'main.png', 'main.png', NULL, 23),
+(11, 'Main CA 2700', '8000000', 'Mới', 'Nhập khẩu', '2 kênh - 700w/1 kênh\r\nbảo hành 12 tháng\nSale off 25%', 'main.png', 'main.png', 'main.png', 'main.png', NULL, 23),
+(12, 'Main CA 2900', '9500000', 'Mới', 'Nhập khẩu', '2 kênh - 900w/1 kênh\r\nbảo hành 12 tháng\nSale off 25%', 'main.png', 'main.png', 'main.png', 'main.png', NULL, 23),
+(13, 'Main CA 4700', '14200000', 'Mới', 'Nhập khẩu', '4 kênh - 700w/1 kênh\r\nbảo hành 12 tháng\nSale off 25%', 'main.png', 'main.png', 'main.png', 'main.png', NULL, 23),
+(14, 'Main CA 4900', '15400000', 'Mới', 'Nhập khẩu', '4 kênh - 900w/1 kênh\r\nbảo hành 12 tháng\nSale off 25%', 'main.png', 'main.png', 'main.png', 'main.png', NULL, 23),
+(15, 'Main XT 650', '5500000', 'Mới', 'Nhập khẩu', '2 kênh - 650/1 kênh\r\nbảo hành 12 tháng', 'main.png', 'main.png', 'main.png', 'main.png', NULL, 23),
+(16, 'MIC QTA QS-980', '3200000', 'Mới', 'Nhập khẩu', 'MICRO KHÔNG DÂY', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', '0000-00-00 00:00:00', 24),
+(17, 'MIC Vina 939', '400000', 'Mới', 'Nhập khẩu', 'MICRO Có DÂY', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', NULL, 24),
+(18, 'MIC Vina Uss600', '2500000', 'Mới', 'Nhập khẩu', 'MICRO KHÔNG DÂY', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', NULL, 24),
+(19, 'MIC Vina Uss900', '4000000', 'Mới', 'Nhập khẩu', 'MICRO KHÔNG DÂY', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', NULL, 24),
+(20, 'MIC Vina Uss1000', '4800000', 'Mới', 'Nhập khẩu', 'MICRO KHÔNG DÂY', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', NULL, 24),
+(21, 'MIC Vina V10', '6000000', 'Mới', 'Nhập khẩu', 'MICRO KHÔNG DÂY', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', 'Micro-Vina-KTV-USS-900.jpg', NULL, 24);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `cart`
+-- Table structure for table `cart`
 --
 
 CREATE TABLE `cart` (
@@ -67,7 +83,7 @@ CREATE TABLE `cart` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `cart`
+-- Dumping data for table `cart`
 --
 
 INSERT INTO `cart` (`id`, `idcart_item`, `iduser`, `updated`) VALUES
@@ -145,12 +161,13 @@ INSERT INTO `cart` (`id`, `idcart_item`, `iduser`, `updated`) VALUES
 (133, 143, 65, '2018-05-05 18:35:28'),
 (134, 144, 65, '2018-05-05 18:35:28'),
 (135, 145, 66, '2018-05-05 18:46:20'),
-(136, 146, 67, '2018-05-07 23:25:41');
+(136, 146, 67, '2018-05-07 23:25:41'),
+(137, 147, 68, '2018-05-12 22:20:49');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `cart_item`
+-- Table structure for table `cart_item`
 --
 
 CREATE TABLE `cart_item` (
@@ -161,7 +178,7 @@ CREATE TABLE `cart_item` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `cart_item`
+-- Dumping data for table `cart_item`
 --
 
 INSERT INTO `cart_item` (`id`, `idaudio`, `amount`, `price`) VALUES
@@ -245,12 +262,13 @@ INSERT INTO `cart_item` (`id`, `idaudio`, `amount`, `price`) VALUES
 (143, 1, 2, 2),
 (144, 2, 2, 24),
 (145, 1, 7, 7),
-(146, 1, 2, 30000000);
+(146, 1, 2, 30000000),
+(147, 6, 1, 4000000);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `category`
+-- Table structure for table `category`
 --
 
 CREATE TABLE `category` (
@@ -259,7 +277,7 @@ CREATE TABLE `category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `category`
+-- Dumping data for table `category`
 --
 
 INSERT INTO `category` (`idcategory`, `name`) VALUES
@@ -269,7 +287,7 @@ INSERT INTO `category` (`idcategory`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `news`
+-- Table structure for table `news`
 --
 
 CREATE TABLE `news` (
@@ -283,17 +301,18 @@ CREATE TABLE `news` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `news`
+-- Dumping data for table `news`
 --
 
 INSERT INTO `news` (`idnews`, `title`, `description`, `content`, `image`, `updated`, `idcategory`) VALUES
 (1, 'TIẾT LỘ BÍ KÍP SỬ DỤNG ĐỒNG HỒ ĐEO TAY ĐÚNG CÁCH', '<p>Ngoài bảo dưỡng lau dầu định kì, việc sử dụng đúng cách cũng giúp chiếc đồng hồ của bạn chạy ổn định hơn. Đồng thời, hình thức cũng được giữ gìn theo năm tháng.</p>\r\n<p>Sau đây, PTS Watch Shop xin gửi đến các bạn một vài chú ý nhỏ trong việc sử dụng đồng hồ.</p>', '<p style=\"text-align: justify;\">Ngoài bảo dưỡng lau dầu định kì, việc sử dụng đúng cách cũng giúp chiếc đồng hồ của bạn chạy ổn định hơn. Đồng thời, hình thức cũng được giữ gìn theo năm tháng.</p><p style=\"text-align: justify;\">Sau đây, PTS Watch Shop xin gửi đến các bạn một vài chú ý nhỏ trong việc sử dụng đồng hồ.</p><p> </p><h4 style=\"text-align: justify;\"><span style=\"color: #ff0000;\">Chú ý trong hoạt động thường ngày</span></h4><p> </p><p dir=\"ltr\" style=\"text-align: justify;\">Của bền tại người. Đồng hồ dù tốt đến đâu nhưng nếu bạn không chú ý giữ gìn trong quá trình sử dụng sẽ khiến đồng hồ của bạn xuống cấp nhanh chóng. Một số lưu ý trong quá trình sinh hoạt hàng ngày bạn cần nhớ:</p><p dir=\"ltr\" style=\"text-align: justify;\">Tránh sử dụng hoặc để đồng hồ ở những nơi có nhiều từ trường như loa, đài, tivi… Nếu tính chất công việc phải tiếp xúc với máy tính trong một thời gian dài bạn có thể đứng dậy nghỉ định kỳ mỗi lần 10-15 phút. Vừa đảm bảo sức khỏe của bạn cũng đồng thời cho đồng hồ hạn chế bị nhiễm từ.</p><p dir=\"ltr\" style=\"text-align: justify;\">Đối với đồng hồ Automatic, năng lượng của đồng hồ được tích trữ từ chuyển động của cổ tay. Nên đeo đồng hồ từ 8 – 10 tiếng/ngày (với hoạt động bình thường) để bảo đảm nguồn năng lượng đủ cho đồng hồ hoạt động liên tục. Trường hợp đồng hồ có khả năng lên cót tay, bạn nên lên cót bằng tay (nút vặn) 15 – 20 vòng nếu trước đó ngừng đeo ít đeo hay ít hoạt động. Mục đích là cung cấp đủ năng lượng để đồng hồ hoạt động chính xác.</p><p dir=\"ltr\" style=\"text-align: justify;\">Tránh các hoạt động mạnh có thể làm va đập đồng hồ. Khi chơi thể thao không nên đeo đồng hồ ngoại trừ các loại đồng hồ chuyên dụng.</p><p dir=\"ltr\" style=\"text-align: justify;\">Không để đồng hồ tiếp xúc trực tiếp với hóa chất, mỹ phẩm, nước hoa, chất tẩy rửa … Những hóa chất ấy có thể làm biến dạng dây, vỏ, vòng đệm chống nước của đồng hồ.</p><p dir=\"ltr\" style=\"text-align: justify;\">Không để đồng hồ ở nơi có nhiệt độ trên 60 độ C và dưới 0 độ C; tránh thay đổi nhiệt độ đột ngột để đảm bảo đồng hồ hoạt động được chính xác.</p><p> </p><h4 style=\"text-align: justify;\"><span style=\"color: #ff0000;\">Chú ý khi tiếp xúc với nước</span></h4><p dir=\"ltr\" style=\"text-align: justify;\">Sử dụng đồng hồ trong việc bơi lội hay chỉ đơn giản khi rửa tay, tắm rửa bạn cũng cần phải lưu ý một số vấn đề sau.</p><p dir=\"ltr\" style=\"text-align: justify;\">Mỗi mức độ chịu nước tương ứng với những tình huống được phép sử dụng đồng hồ khác nhau. Khi sử dụng đặc biệt phải chú ý đến thông số này.</p><p dir=\"ltr\" style=\"text-align: justify;\">Với những chiếc đồng hồ có nhiều chức năng và nút bấm, tuyệt đối không bấm nút khi ở dưới nước.</p><p dir=\"ltr\" style=\"text-align: justify;\">Kiểm tra tình trạng núm vặn thường xuyên, vị trí đúng là ở nấc trong cùng. Trong quá trình sử dụng, núm rất dễ mắc vào chỉ áo hay các tác động bên ngoài và bị kéo ra khiến nước hoặc bụi bẩn lọt vào ngoài ý muốn.</p><p dir=\"ltr\" style=\"text-align: justify;\">Độ kín nước của đồng hồ không phải là vĩnh viễn. Nó có thể bị ảnh hưởng bởi sự lão hóa của các vòng đệm chống nước hoặc bị va đập. Nên để sử dụng đồng hồ đúng cách, chúng tôi lưu ý các bạn nên kiểm tra độ kín nước của đồng hồ 1 lần/năm tại các trung tâm bảo hành uy tín. Thay pin, lau dầu cũng ảnh hưởng tới độ kín nước. Vì vậy, nên chọn các cửa hàng, trung tâm uy tín, có chuyên môn cao để thực hiện chính xác nhất.</p><p dir=\"ltr\" style=\"text-align: justify;\">Đặc biệt, đối với đồng hồ lặn, ngay sau khi bơi dưới nước, luôn rửa đồng hồ bằng nước ẩm và dùng khăn vải mềm lau khô. Chú ý, tuyệt đối không được dùng nước nóng bốc hơi ngay tại vòi.</p><p> </p><h4 style=\"text-align: justify;\"><span style=\"color: #ff0000;\">Một số chú ý khác cần nhớ</span></h4><p> </p><p dir=\"ltr\" style=\"text-align: justify;\">Ngoài những lưu ý thông thường nêu trên, một số kinh nghiệm bảo quản nhỏ cũng giúp đồng hồ của bạn giữ được vẻ bền đẹp như mới.</p><p dir=\"ltr\" style=\"text-align: justify;\">Vệ sinh đồng hồ thường xuyên bằng cách lau rửa đồng hồ hàng tuần bằng nước ấm với xà phòng có tính kiềm nhẹ để làm sạch bụi bẩn và muối đọng do mồ hôi tiết ra.</p><p dir=\"ltr\" style=\"text-align: justify;\">Thực hiện bảo dưỡng đồng hồ cơ và thay pin cho đồng hồ Quartz định kỳ sẽ giúp bộ máy hoạt động trơn tru. Thông thường với đồng hồ Quartz nên thay pin 2-3 năm một lần. Với những chiếc đồng hồ Automatic, tùy thuộc vào khuyến cáo của từng hãng. 2-3 năm đối với máy Nhật và 3-5 năm đối với máy Thụy Sỹ. Cá biệt có những bộ máy tinh xảo 8 năm mới cần phải bảo dưỡng.</p><p dir=\"ltr\" style=\"text-align: justify;\">Trên đây là những kiến thức không thể bỏ qua trong cách sử dụng đồng hồ. Các bạn có thể theo dõi các bài viết của PTS Watch Shop trên trang web của chúng tôi để có thêm nhiều kiến thức bổ ích.</p>', 'news1.jpg', '2018-05-07 22:57:03', 1),
-(2, 'MẸO TÍNH KÍCH THƯỚC MẶT ĐỒNG HỒ THEO CHU VI CỔ TAY', '<p>Bạn muốn mua một chiếc đồng hồ đẹp nhưng lo sợ mặt đồng hồ quá to hoặc quá bé so với cổ tay? Dưới đây là cách tính kích thước mặt đồng hồ theo chu vi cổ tay</p>', '<h4 class=\"knc-sapo\" style=\"text-align: justify;\">Bạn muốn mua một chiếc đồng hồ đẹp nhưng lo sợ mặt đồng hồ quá to hoặc quá bé so với cổ tay? Dưới đây là cách tính kích thước mặt đồng hồ theo chu vi cổ tay</h4><div id=\"ContentDetail\" class=\"knc-content\"><p style=\"text-align: justify;\">Đồng hồ cũng như quần áo, giày dép. Muốn đeo đẹp phải phù hợp với màu da, số đo vóc dáng. Vì vậy, trước khi mua hãy chú ý đến việc chọn size mặt đồng hồ.</p><p> </p><h5 style=\"text-align: justify;\"><span style=\"color: #ff0000;\"><strong>Mặt đồng hồ có những kích thước phổ biến nào?</strong></span></h5><p> </p><p style=\"text-align: justify;\">Đồng hồ cho nữ giới:</p><p style=\"text-align: justify;\">- Cỡ nhỏ (Women\'s Mini): 23 - 25mm</p><p style=\"text-align: justify;\">- Cỡ phổ biến (Women\'s Regular): 26 - 29mm</p><p style=\"text-align: justify;\">- Cỡ lớn (Mid size): 34-36mm</p><p> </p><p style=\"text-align: justify;\">Đồng hồ cho nam giới:</p><p style=\"text-align: justify;\">- Cỡ thường (Men\'s): 37 - 39 mm</p><p style=\"text-align: justify;\">- Cỡ thể thao (Men\'s Sport): 40 - 42 mm</p><p style=\"text-align: justify;\">- Cỡ lớn (Men XL): 45 mm</p><p style=\"text-align: justify;\">Đồng hồ dành cho nam có size khoảng từ 34 - 50 mm. Đồng hồ dành cho nữ có size khoảng 23 - 38 mm. Tuy nhiên, thực tế, rất nhiều cô gái thích đeo đồng hồ Oversize nhằm thể hiện sự cá tính và nhiều nam giới (đặc biệt ở châu Á) có cổ tay khá bé. Trong những trường hợp này, chọn Midsize (34 - 36mm) là cách tốt nhất.</p><p style=\"text-align: justify;\">Nếu bạn mua đồng hồ để tặng và không biết chính xác cỡ cổ tay của người đeo, có thể chọn trong mức an toàn với nam là 39 - 42 mm và với nữ là 29 - 34 mm.</p><p style=\"text-align: justify;\">Khi mua, kích thước mặt đồng hồ rất quan trọng. Tuy nhiên, do thiết kế của đồng hồ (đồ dạy, kiểu tai) nên cần chú ý thêm các tham số bên dưới. Rất nhiều loại đồng hồ có mặt to, dày nhưng phần tai (lug) và dây đeo lại khá thon, ôm.Vì vậy, nên đo cả tai đồng hồ.</p><p> </p><h5 style=\"text-align: justify;\"><span style=\"color: #ff0000;\"><strong>Đo độ dài dây đồng hồ bằng chu vi cổ tay</strong></span></h5><p style=\"text-align: justify;\">- Đồng hồ nữ thường có dây dài từ 171 đến 203 mm.</p><p style=\"text-align: justify;\">- Đồng hồ nam thường có dây dài từ 196 đến 241 mm.</p><p style=\"text-align: justify;\">Các loại dây da thường được đục sẵn các lỗ vừa khít với cổ tay người đeo. Với dây kim loại thường là chuỗi mắt xích nối vào nhau. Vì vậy, khi bạn mang ra cửa hàng để cắt bớt dây nên nhớ giữ lại các mắt xích phòng khi size cổ tay thay đổi hoặc dây bị đứt, sẽ có sẵn mắt xích để thay thế.</p><p style=\"text-align: justify;\">Tỉ lệ cân đối tham khảo giữa mặt và chu vi cổ tay là 4.0-5.0.</p><p style=\"text-align: justify;\">- Cách tính tỉ lệ: Lấy chiều dài dây đồng hồ (hay chính là chu vi của cổ tay bạn) chia cho đường kính mặt đồng hồ.</p><p style=\"text-align: justify;\">+ Chu vi cổ tay / 4.5 = cỡ đồng hồ lớn nhất</p><p style=\"text-align: justify;\">+ Chu vi cổ tay / 4 = cỡ đồng hồ vừa</p><p style=\"text-align: justify;\">+ Chu vi cổ tay / 5 cỡ đồng hồ bé nhất</p><p style=\"text-align: justify;\">Bạn có thể đo chu vi của cổ tay bạn bằng cách lấy 1 đoạn dây, rồi quần quanh cổ tay thành1 vòng tròn, đánh dấu vị trí 2 đầu dây gặp nhau và cuối cùng là đo chiều dài của đoạn dây đã đó, sẽ được chu vi của cổ tay.</p></div>', 'news1.jpg', '2018-05-07 22:59:18', 1);
+(2, 'MẸO TÍNH KÍCH THƯỚC MẶT ĐỒNG HỒ THEO CHU VI CỔ TAY', '<p>Bạn muốn mua một chiếc đồng hồ đẹp nhưng lo sợ mặt đồng hồ quá to hoặc quá bé so với cổ tay? Dưới đây là cách tính kích thước mặt đồng hồ theo chu vi cổ tay</p>', '<h4 class=\"knc-sapo\" style=\"text-align: justify;\">Bạn muốn mua một chiếc đồng hồ đẹp nhưng lo sợ mặt đồng hồ quá to hoặc quá bé so với cổ tay? Dưới đây là cách tính kích thước mặt đồng hồ theo chu vi cổ tay</h4><div id=\"ContentDetail\" class=\"knc-content\"><p style=\"text-align: justify;\">Đồng hồ cũng như quần áo, giày dép. Muốn đeo đẹp phải phù hợp với màu da, số đo vóc dáng. Vì vậy, trước khi mua hãy chú ý đến việc chọn size mặt đồng hồ.</p><p> </p><h5 style=\"text-align: justify;\"><span style=\"color: #ff0000;\"><strong>Mặt đồng hồ có những kích thước phổ biến nào?</strong></span></h5><p> </p><p style=\"text-align: justify;\">Đồng hồ cho nữ giới:</p><p style=\"text-align: justify;\">- Cỡ nhỏ (Women\'s Mini): 23 - 25mm</p><p style=\"text-align: justify;\">- Cỡ phổ biến (Women\'s Regular): 26 - 29mm</p><p style=\"text-align: justify;\">- Cỡ lớn (Mid size): 34-36mm</p><p> </p><p style=\"text-align: justify;\">Đồng hồ cho nam giới:</p><p style=\"text-align: justify;\">- Cỡ thường (Men\'s): 37 - 39 mm</p><p style=\"text-align: justify;\">- Cỡ thể thao (Men\'s Sport): 40 - 42 mm</p><p style=\"text-align: justify;\">- Cỡ lớn (Men XL): 45 mm</p><p style=\"text-align: justify;\">Đồng hồ dành cho nam có size khoảng từ 34 - 50 mm. Đồng hồ dành cho nữ có size khoảng 23 - 38 mm. Tuy nhiên, thực tế, rất nhiều cô gái thích đeo đồng hồ Oversize nhằm thể hiện sự cá tính và nhiều nam giới (đặc biệt ở châu Á) có cổ tay khá bé. Trong những trường hợp này, chọn Midsize (34 - 36mm) là cách tốt nhất.</p><p style=\"text-align: justify;\">Nếu bạn mua đồng hồ để tặng và không biết chính xác cỡ cổ tay của người đeo, có thể chọn trong mức an toàn với nam là 39 - 42 mm và với nữ là 29 - 34 mm.</p><p style=\"text-align: justify;\">Khi mua, kích thước mặt đồng hồ rất quan trọng. Tuy nhiên, do thiết kế của đồng hồ (đồ dạy, kiểu tai) nên cần chú ý thêm các tham số bên dưới. Rất nhiều loại đồng hồ có mặt to, dày nhưng phần tai (lug) và dây đeo lại khá thon, ôm.Vì vậy, nên đo cả tai đồng hồ.</p><p> </p><h5 style=\"text-align: justify;\"><span style=\"color: #ff0000;\"><strong>Đo độ dài dây đồng hồ bằng chu vi cổ tay</strong></span></h5><p style=\"text-align: justify;\">- Đồng hồ nữ thường có dây dài từ 171 đến 203 mm.</p><p style=\"text-align: justify;\">- Đồng hồ nam thường có dây dài từ 196 đến 241 mm.</p><p style=\"text-align: justify;\">Các loại dây da thường được đục sẵn các lỗ vừa khít với cổ tay người đeo. Với dây kim loại thường là chuỗi mắt xích nối vào nhau. Vì vậy, khi bạn mang ra cửa hàng để cắt bớt dây nên nhớ giữ lại các mắt xích phòng khi size cổ tay thay đổi hoặc dây bị đứt, sẽ có sẵn mắt xích để thay thế.</p><p style=\"text-align: justify;\">Tỉ lệ cân đối tham khảo giữa mặt và chu vi cổ tay là 4.0-5.0.</p><p style=\"text-align: justify;\">- Cách tính tỉ lệ: Lấy chiều dài dây đồng hồ (hay chính là chu vi của cổ tay bạn) chia cho đường kính mặt đồng hồ.</p><p style=\"text-align: justify;\">+ Chu vi cổ tay / 4.5 = cỡ đồng hồ lớn nhất</p><p style=\"text-align: justify;\">+ Chu vi cổ tay / 4 = cỡ đồng hồ vừa</p><p style=\"text-align: justify;\">+ Chu vi cổ tay / 5 cỡ đồng hồ bé nhất</p><p style=\"text-align: justify;\">Bạn có thể đo chu vi của cổ tay bạn bằng cách lấy 1 đoạn dây, rồi quần quanh cổ tay thành1 vòng tròn, đánh dấu vị trí 2 đầu dây gặp nhau và cuối cùng là đo chiều dài của đoạn dây đã đó, sẽ được chu vi của cổ tay.</p></div>', 'news1.jpg', '2018-05-07 22:59:18', 1),
+(3, 'Công trình hoàn thành', 'Công trình hoàn thành', 'Công trình hoàn thành', 'news1.jpg', '2018-05-12 20:47:57', 2);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `phonenumbers`
+-- Table structure for table `phonenumbers`
 --
 
 CREATE TABLE `phonenumbers` (
@@ -302,7 +321,7 @@ CREATE TABLE `phonenumbers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `phonenumbers`
+-- Dumping data for table `phonenumbers`
 --
 
 INSERT INTO `phonenumbers` (`id`, `number`) VALUES
@@ -312,7 +331,7 @@ INSERT INTO `phonenumbers` (`id`, `number`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `slide`
+-- Table structure for table `slide`
 --
 
 CREATE TABLE `slide` (
@@ -325,18 +344,18 @@ CREATE TABLE `slide` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `slide`
+-- Dumping data for table `slide`
 --
 
 INSERT INTO `slide` (`idslide`, `title`, `description`, `content`, `image`, `advertisement`) VALUES
-(1, 'Quanaudio.vn', 'Chuẩn không cần chỉnh.', 'Chúng ta không thể chống lại những thằng ngu vì chúng quá đông và nguy hiểm.', 'assets/images/slide/slide-1.jpg', 'assets/images/home/pricing.png'),
-(2, 'Quanaudio.vn', 'Xấu nhưng biết phấn đấu.', 'úc trước anh/em đẹp trai/xinh lắm bây giờ thì đỡ nhiều rồi.', 'assets/images/slide/slide-2.jpg', 'assets/images/home/pricing.png'),
-(3, 'Quanaudio.vn', 'Tình yêu là vĩnh cửu.', 'Đừng tự ti vì mình nghèo mà vẫn giỏi mà hãy tự hỏi tại sao mình giỏi mà mình vẫn nghèo. Nhục không phải là nghèo khó , nhưng nghèo khó thì thật là nhục.', 'assets/images/slide/slide-3.jpg', 'assets/images/home/pricing.png');
+(1, 'quanaudio.vn.vn', 'Chuẩn không cần chỉnh.', 'Chúng ta không thể chống lại những thằng ngu vì chúng quá đông và nguy hiểm.', 'assets/images/slide/slide-1.jpg', 'assets/images/home/pricing.png'),
+(2, 'quanaudio.vn.vn', 'Xấu nhưng biết phấn đấu.', 'úc trước anh/em đẹp trai/xinh lắm bây giờ thì đỡ nhiều rồi.', 'assets/images/slide/slide-2.jpg', 'assets/images/home/pricing.png'),
+(3, 'quanaudio.vn.vn', 'Tình yêu là vĩnh cửu.', 'Đừng tự ti vì mình nghèo mà vẫn giỏi mà hãy tự hỏi tại sao mình giỏi mà mình vẫn nghèo. Nhục không phải là nghèo khó , nhưng nghèo khó thì thật là nhục.', 'assets/images/slide/slide-3.jpg', 'assets/images/home/pricing.png');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `type`
+-- Table structure for table `type`
 --
 
 CREATE TABLE `type` (
@@ -346,19 +365,19 @@ CREATE TABLE `type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `type`
+-- Dumping data for table `type`
 --
 
 INSERT INTO `type` (`idtype`, `name`, `idparent`) VALUES
-(21, 'Mic', 0),
-(22, 'Ampli', 0),
-(23, 'Mic1', 21),
-(24, 'Mic2', 21);
+(21, 'Loa', 0),
+(22, 'Karaoke', 0),
+(23, 'Main', 0),
+(24, 'Micro', 0);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -372,7 +391,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`iduser`, `fullname`, `phone`, `email`, `address`, `message`, `updated`) VALUES
@@ -421,21 +440,22 @@ INSERT INTO `user` (`iduser`, `fullname`, `phone`, `email`, `address`, `message`
 (64, 'gfds', 'sdfg', 'sdfg', 'sdfgsdfg', 'sdfgsdfg', '2018-05-05 18:34:50'),
 (65, 'gsdfg', 'sdfg', 'sdfg', 'sdfgsd', 'fgsdfg', '2018-05-05 18:35:28'),
 (66, 'g', 'gsdfg', 'sdfg', 'fgsdf', 'gsdfgsdfg', '2018-05-05 18:46:20'),
-(67, 'giangnd', '01321313', 'gádlkj', 'jlsdfga', 'ádfasdf', '2018-05-07 23:25:41');
+(67, 'giangnd', '01321313', 'gádlkj', 'jlsdfga', 'ádfasdf', '2018-05-07 23:25:41'),
+(68, 'gdfsfg', 'sdfgsdfg', 'sdfgsd', 'fgsdfgsdf', 'gsdfgsdfg', '2018-05-12 22:20:49');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `audio`
+-- Indexes for table `audio`
 --
 ALTER TABLE `audio`
   ADD PRIMARY KEY (`idaudio`,`idtype`),
   ADD KEY `fk_audio_type_idx` (`idtype`);
 
 --
--- Chỉ mục cho bảng `cart`
+-- Indexes for table `cart`
 --
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`id`),
@@ -445,126 +465,136 @@ ALTER TABLE `cart`
   ADD KEY `idcart_item_2` (`idcart_item`);
 
 --
--- Chỉ mục cho bảng `cart_item`
+-- Indexes for table `cart_item`
 --
 ALTER TABLE `cart_item`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idaudio` (`idaudio`);
 
 --
--- Chỉ mục cho bảng `category`
+-- Indexes for table `category`
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`idcategory`);
 
 --
--- Chỉ mục cho bảng `news`
+-- Indexes for table `news`
 --
 ALTER TABLE `news`
   ADD PRIMARY KEY (`idnews`,`idcategory`),
   ADD KEY `fk_news_category1_idx` (`idcategory`);
 
 --
--- Chỉ mục cho bảng `phonenumbers`
+-- Indexes for table `phonenumbers`
 --
 ALTER TABLE `phonenumbers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `slide`
+-- Indexes for table `slide`
 --
 ALTER TABLE `slide`
   ADD PRIMARY KEY (`idslide`);
 
 --
--- Chỉ mục cho bảng `type`
+-- Indexes for table `type`
 --
 ALTER TABLE `type`
   ADD PRIMARY KEY (`idtype`);
 
 --
--- Chỉ mục cho bảng `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`iduser`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `audio`
+-- AUTO_INCREMENT for table `audio`
 --
 ALTER TABLE `audio`
-  MODIFY `idaudio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idaudio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
 --
--- AUTO_INCREMENT cho bảng `cart`
+-- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
+
 --
--- AUTO_INCREMENT cho bảng `cart_item`
+-- AUTO_INCREMENT for table `cart_item`
 --
 ALTER TABLE `cart_item`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
+
 --
--- AUTO_INCREMENT cho bảng `category`
+-- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
   MODIFY `idcategory` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
--- AUTO_INCREMENT cho bảng `news`
+-- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `idnews` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idnews` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
--- AUTO_INCREMENT cho bảng `phonenumbers`
+-- AUTO_INCREMENT for table `phonenumbers`
 --
 ALTER TABLE `phonenumbers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
--- AUTO_INCREMENT cho bảng `slide`
+-- AUTO_INCREMENT for table `slide`
 --
 ALTER TABLE `slide`
   MODIFY `idslide` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
--- AUTO_INCREMENT cho bảng `type`
+-- AUTO_INCREMENT for table `type`
 --
 ALTER TABLE `type`
   MODIFY `idtype` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
 --
--- AUTO_INCREMENT cho bảng `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `iduser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `iduser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `audio`
+-- Constraints for table `audio`
 --
 ALTER TABLE `audio`
   ADD CONSTRAINT `fk_audio_type` FOREIGN KEY (`idtype`) REFERENCES `type` (`idtype`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Các ràng buộc cho bảng `cart`
+-- Constraints for table `cart`
 --
 ALTER TABLE `cart`
   ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`idcart_item`) REFERENCES `cart_item` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`iduser`) REFERENCES `user` (`iduser`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `cart_item`
+-- Constraints for table `cart_item`
 --
 ALTER TABLE `cart_item`
   ADD CONSTRAINT `cart_item_ibfk_1` FOREIGN KEY (`idaudio`) REFERENCES `audio` (`idaudio`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `news`
+-- Constraints for table `news`
 --
 ALTER TABLE `news`
   ADD CONSTRAINT `fk_news_category1` FOREIGN KEY (`idcategory`) REFERENCES `category` (`idcategory`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
