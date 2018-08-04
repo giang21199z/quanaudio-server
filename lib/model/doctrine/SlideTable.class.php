@@ -24,4 +24,26 @@ class SlideTable extends Doctrine_Table
             ->fetchArray();
         return $query;
     }
+
+    public static function getSlideById($id){
+        $query = SlideTable::getInstance()
+            ->createQuery('a')
+            ->select('a.*')
+            ->where('a.idslide = ?', $id)
+            ->fetchArray();
+        return $query[0];
+    }
+
+    public static function updateSlide($id, $slide){
+        SlideTable::getInstance()
+            ->createQuery('a')
+            ->update()
+            ->set('a.title', '?', $slide->getTitle())
+            ->set('a.description', '?', $slide->getDescription())
+            ->set('a.content', '?', $slide->getContent())
+            ->set('a.image', '?', $slide->getImage())
+            ->set('a.advertisement', '?', $slide->getAdvertisement())
+            ->where('a.idslide = ?', $id)
+            ->execute();
+    }
 }

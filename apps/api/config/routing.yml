@@ -4,6 +4,12 @@
 get_slide:
   url:   /get-slides
   param: { module: api, action: getSlides }
+get_slide_detail:
+  url:   /get-slide-detail/:id
+  param: { module: api, action: getSlideDetail }
+put_update_slide:
+  url:   /update-slide/:id
+  param: { module: api, action: updateSlide, id: ''}
 get_menu_type:
   url:   /get-menu-types
   param: { module: api, action: getTypesMenu }
@@ -31,13 +37,34 @@ get_detail_new:
 get_random_new:
   url:   /get-random-new/:id
   param: { module: api, action: getRandomNew, id: ''}
+get_random_audio:
+  url:   /get-random-audio/:id
+  param: { module: api, action: getRandomAudio, id: ''}
 # ========admin router===========
 post_login:
   url:   /login
   param: { module: api, action: postLogin}
-post_produt:
+post_product:
   url:   /add-new-product
   param: { module: api, action: postAddProduct}
+delete_product:
+  url:   /delete-product/:id
+  param: { module: api, action: deleteProduct, id: ''}
+put_update_image:
+  url:   /update-image/:id
+  param: { module: api, action: updateImageSrc, id: ''}
+put_update_audio:
+  url:   /update-audio/:id
+  param: { module: api, action: updateAudio, id: ''}
+post_news:
+  url:   /add-new-news
+  param: { module: api, action: postNews}
+delete_news:
+  url:   /delete-news/:id
+  param: { module: api, action: deleteNews, id: ''}
+put_update_news:
+  url:   /update-news/:id
+  param: { module: api, action: updateNews, id: ''}
 # default rules
 homepage:
   url:   /

@@ -10,7 +10,7 @@ Doctrine_Manager::getInstance()->bindComponent('Audio', 'doctrine');
  * @property integer $idaudio
  * @property string $name
  * @property string $price
- * @property string $condition
+ * @property string $sale
  * @property string $brand
  * @property string $description
  * @property string $image
@@ -25,7 +25,7 @@ Doctrine_Manager::getInstance()->bindComponent('Audio', 'doctrine');
  * @method integer             getIdaudio()     Returns the current record's "idaudio" value
  * @method string              getName()        Returns the current record's "name" value
  * @method string              getPrice()       Returns the current record's "price" value
- * @method string              getCondition()   Returns the current record's "condition" value
+ * @method string              getSale()   Returns the current record's "sale" value
  * @method string              getBrand()       Returns the current record's "brand" value
  * @method string              getDescription() Returns the current record's "description" value
  * @method string              getImage()       Returns the current record's "image" value
@@ -39,7 +39,7 @@ Doctrine_Manager::getInstance()->bindComponent('Audio', 'doctrine');
  * @method Audio               setIdaudio()     Sets the current record's "idaudio" value
  * @method Audio               setName()        Sets the current record's "name" value
  * @method Audio               setPrice()       Sets the current record's "price" value
- * @method Audio               setCondition()   Sets the current record's "condition" value
+ * @method Audio               setSale()   Sets the current record's "sale" value
  * @method Audio               setBrand()       Sets the current record's "brand" value
  * @method Audio               setDescription() Sets the current record's "description" value
  * @method Audio               setImage()       Sets the current record's "image" value
@@ -87,7 +87,7 @@ abstract class BaseAudio extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 20,
              ));
-        $this->hasColumn('condition', 'string', 45, array(
+        $this->hasColumn('sale', 'string', 500, array(
              'type' => 'string',
              'fixed' => 0,
              'unsigned' => false,

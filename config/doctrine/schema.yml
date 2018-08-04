@@ -22,8 +22,8 @@ Audio:
       primary: false
       notnull: false
       autoincrement: false
-    condition:
-      type: string(45)
+    sale:
+      type: string(500)
       fixed: false
       unsigned: false
       primary: false

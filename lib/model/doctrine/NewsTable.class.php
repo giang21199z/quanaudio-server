@@ -57,4 +57,22 @@ class NewsTable extends Doctrine_Table
             ->fetchArray();
         return $new[0];
     }
+    public static function deleteNewsById($id){
+        NewsTable::getInstance()
+            ->createQuery('a')
+            ->delete()
+            ->where('a.idnews = ?', $id)
+            ->execute();
+    }
+    public static function updateNews($id, $news){
+        NewsTable::getInstance()
+            ->createQuery('a')
+            ->update()
+            ->set('a.title', '?', $news->getTitle())
+            ->set('a.description', '?', $news->getDescription())
+            ->set('a.image', '?', $news->getImage())
+            ->set('a.content', '?', $news->getContent())
+            ->where('a.idnews = ?', $id)
+            ->execute();
+    }
 }

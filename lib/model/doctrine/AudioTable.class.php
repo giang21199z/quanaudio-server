@@ -17,10 +17,16 @@ class AudioTable extends Doctrine_Table
         return Doctrine_Core::getTable('Audio');
     }
 
-    public static function getAudios(){
+    public static function getAudios($keyword = '', $limit = 1000, $offset = 0){
+        $keyword = $keyword === NULL ? '': $keyword;
+        $limit = $limit === NULL ? '': $limit;
+        $offset = $offset === NULL ? '': $offset;
         $audios = AudioTable::getInstance()
             ->createQuery('a')
             ->select('a.*')
+            ->limit($limit)
+            ->where('a.name LIKE ?', '%'.$keyword.'%')
+            ->offset($offset)
             ->fetchArray();
         return $audios;
     }
@@ -48,6 +54,47 @@ class AudioTable extends Doctrine_Table
             ->createQuery('a')
             ->select('a.*')
             ->where('a.idtype = ?', $idtype)
+            ->fetchArray();
+        return $audio;
+    }
+
+    public static function deleteAudioById($id){
+        AudioTable::getInstance()
+            ->createQuery('a')
+            ->delete()
+            ->where('a.idaudio = ?', $id)
+            ->execute();
+    }
+
+    public static function updateImageAudio($id, $srcImage){
+        AudioTable::getInstance()
+            ->createQuery('a')
+            ->update()
+            ->set('a.image','?', $srcImage)
+            ->where('a.idaudio = ?', $id)
+            ->execute();
+    }
+
+    public static function updateAudio($id, $audio){
+        AudioTable::getInstance()
+            ->createQuery('a')
+            ->update()
+            ->set('a.name', '?', $audio->getName())
+            ->set('a.price', '?', $audio->getPrice())
+            ->set('a.brand', '?', $audio->getBrand())
+            ->set('a.description', '?', $audio->getDescription())
+            ->set('a.sale', '?', $audio->getSale())
+            ->where('a.idaudio = ?', $id)
+            ->execute();
+    }
+
+    public static function getAudioRandom($id){
+        $audio = AudioTable::getInstance()
+            ->createQuery('a')
+            ->select('a.*')
+            ->where('a.idaudio != ?', $id)
+            ->limit(3)
+            ->orderBy('RAND()')
             ->fetchArray();
         return $audio;
     }

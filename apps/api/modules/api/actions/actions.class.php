@@ -6,6 +6,8 @@
  * Time: 20:53 CH
  */
 header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS');
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 class apiActions extends sfActions
 {
 
@@ -15,6 +17,29 @@ class apiActions extends sfActions
     public function executeGetSlides(sfWebRequest $request){
         return $this->renderText(json_encode(SlideTable::getAllSlide()));
     }
+
+    public function executeGetSlideDetail(sfWebRequest $request){
+        $id = $request->getParameter('id');
+        return $this->renderText(json_encode(SlideTable::getSlideById($id)));
+    }
+
+    public function executeUpdateSlide(sfWebRequest $request){
+        if($request->isMethod('PUT')){
+            $id = $request->getParameter('id');
+            $dataPut = json_decode($request->getContent());
+            $slide = new Slide();
+            $slide->setTitle($dataPut->title);
+            $slide->setDescription($dataPut->description);
+            $slide->setContent($dataPut->content);
+            $slide->setImage($dataPut->image);
+            $slide->setAdvertisement($dataPut->advertisement);
+            SlideTable::updateSlide($id, $slide);
+
+            return $this->renderText(json_encode(["message" => "Update SUCCESS"]));
+        }
+        return $this->renderText(json_encode(["message" => "FALSE"]));
+    }
+
 
     /**
      * Api get type
@@ -28,8 +53,11 @@ class apiActions extends sfActions
      */
     public function executeGetAudios(sfWebRequest $request){
         $type = $request->getParameter('type');
+        $limit = $request->getParameter('limit');
+        $offset = $request->getParameter('offset');
+        $keyword = $request->getParameter('keyword');
         if ($type == NULL) {
-            return $this->renderText(json_encode(AudioTable::getAudios()));
+            return $this->renderText(json_encode(AudioTable::getAudios($keyword,$limit, $offset)));
         } else {
             return $this->renderText(json_encode(AudioTable::getAudioByType($type)));
         }
@@ -95,7 +123,7 @@ class apiActions extends sfActions
      */
     public function executeGetLatestNews(sfWebRequest $request){
         $offset = $request->getParameter('pageNum');
-        $limit = 1;
+        $limit = 10;
         $category = $request->getParameter('category');
         return $this->renderText(json_encode(NewsTable::getLatestNews($category,$limit, $offset)));
     }
@@ -114,6 +142,14 @@ class apiActions extends sfActions
     public function executeGetRandomNew(sfWebRequest $request){
         $id = $request->getParameter('id');
         return $this->renderText(json_encode(NewsTable::getNewRandom($id)));
+    }
+
+    /**
+     * Api get random new
+     */
+    public function executeGetRandomAudio(sfWebRequest $request){
+        $id = $request->getParameter('id');
+        return $this->renderText(json_encode(AudioTable::getAudioRandom($id)));
     }
 
     /**
@@ -205,8 +241,8 @@ class apiActions extends sfActions
             $audio->setName($dataPost->name);
             $audio->setBrand($dataPost->brand);
             $audio->setPrice($dataPost->price);
-            $audio->setCondition($dataPost->condition);
             $audio->setDescription($dataPost->description);
+            $audio->setSale($dataPost->sale);
             $audio->setImage($dataPost->image);
             $audio->setImage2($dataPost->image2);
             $audio->setImage3($dataPost->image3);
@@ -215,6 +251,83 @@ class apiActions extends sfActions
             $audio->save();
             return $this->renderText(json_encode(["message" => "POST SUCCESS"]));
         }
-        return $this->renderText(json_encode(["message" => "SUCCESS"]));
+        return $this->renderText(json_encode(["message" => "FALSE"]));
+    }
+
+    public function executeDeleteProduct(sfWebRequest $request){
+        if($request->isMethod('DELETE')){
+            $id = $request->getParameter('id');
+            AudioTable::deleteAudioById($id);
+            return $this->renderText(json_encode(["message" => "DELETE SUCCESS"]));
+        }
+        return $this->renderText(json_encode(["message" => "FALSE"]));
+    }
+
+    public function executeUpdateImageSrc(sfWebRequest $request){
+        if($request->isMethod('PUT')){
+            $id = $request->getParameter('id');
+            $dataPut = json_decode($request->getContent());
+            AudioTable::updateImageAudio($id, $dataPut->image);
+            return $this->renderText(json_encode(["message" => "Update SUCCESS"]));
+        }
+        return $this->renderText(json_encode(["message" => "FALSE"]));
+    }
+
+    public function executeUpdateAudio(sfWebRequest $request){
+        if($request->isMethod('PUT')){
+            $id = $request->getParameter('id');
+            $dataPut = json_decode($request->getContent());
+//            var_dump($dataPut);
+//            die($id);
+            $audio = new Audio();
+            $audio->setName($dataPut->name);
+            $audio->setPrice($dataPut->price);
+            $audio->setBrand($dataPut->brand);
+            $audio->setDescription($dataPut->description);
+            $audio->setSale($dataPut->sale);
+            AudioTable::updateAudio($id, $audio);
+
+            return $this->renderText(json_encode(["message" => "Update SUCCESS"]));
+        }
+        return $this->renderText(json_encode(["message" => "FALSE"]));
+    }
+
+    public function executePostNews(sfWebRequest $request){
+        if($request->isMethod('POST')) {
+            $dataPost = json_decode($request->getContent());
+            $news = new News();
+            $news->setTitle($dataPost->title);
+            $news->setDescription($dataPost->description);
+            $news->setImage($dataPost->image);
+            $news->setContent($dataPost->content);
+            $news->setIdcategory($dataPost->category);
+            $news->save();
+            return $this->renderText(json_encode(["message" => "POST SUCCESS"]));
+        }
+        return $this->renderText(json_encode(["message" => "FALSE"]));
+    }
+
+    public function executeDeleteNews(sfWebRequest $request){
+        if($request->isMethod('DELETE')){
+            $id = $request->getParameter('id');
+            NewsTable::deleteNewsById($id);
+            return $this->renderText(json_encode(["message" => "DELETE SUCCESS"]));
+        }
+        return $this->renderText(json_encode(["message" => "FALSE"]));
+    }
+
+    public function executeUpdateNews(sfWebRequest $request){
+        if($request->isMethod('PUT')){
+            $id = $request->getParameter('id');
+            $dataPut = json_decode($request->getContent());
+            $news = new News();
+            $news->setTitle($dataPut->title);
+            $news->setDescription($dataPut->description);
+            $news->setImage($dataPut->image);
+            $news->setContent($dataPut->content);
+            NewsTable::updateNews($id, $news);
+            return $this->renderText(json_encode(["message" => "Update SUCCESS"]));
+        }
+        return $this->renderText(json_encode(["message" => "FALSE"]));
     }
 }
